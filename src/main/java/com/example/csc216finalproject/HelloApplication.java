@@ -54,7 +54,7 @@ public class HelloApplication extends Application {
                 panes[i][j] = box;
             }
         }
-        
+
         Scene scene = new Scene(gridPane);
         stage.setTitle("Bucket Fill");
         stage.setScene(scene);
@@ -78,7 +78,7 @@ public class HelloApplication extends Application {
 
         String oldStyle = panes[x][y].getStyle();
 
-        if(oldStyle.equals("-fx-background-color: red; -fx-border-color: black;")){
+        if(oldStyle.equals("-fx-background-color: red; -fx-border-color: black;") || oldStyle.equals("-fx-background-color: black;")){
             return;
         }
         ArrayDeque<Pair<Integer, Integer>> queue = new ArrayDeque<>();
